@@ -1,0 +1,58 @@
+
+<head>
+
+  <title>Jewel Soft</title>
+    <script language="JavaScript">
+        function validateForm(){
+            var x=document.myform.uname.value;
+            var y=document.myform.password.value;
+            if((x==null||x=="")&&(y==null||y=="")){
+                alert("Username & password must be filled out!");
+                return false;
+            }
+
+            if(x==null||x==""){
+                alert("Username must be filled out!");
+                return false;
+            }
+            if(y==null||y==""){
+                alert("Password must be filled out!");
+                return false;
+            }
+
+        }
+    </script>
+  <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+<div class="header-section">
+    <div class="header">
+        <div class="logo">
+            <h1>Jewel Soft</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="login.html"  class="active">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+  <section class="container">
+    <div class="login">
+      <h1>Login to Jewel Soft</h1>
+      <form method="post" action="loggedin.php" name="myform" onsubmit="return validateForm()">
+        <p><input type="text" name="uname" placeholder="Username"></p>
+        <p><input type="password" name="password" placeholder="Password"></p>
+        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+      </form>
+    </div>
+
+
+  </section>
+
+
+</body>
+</html>
